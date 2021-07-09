@@ -24,7 +24,7 @@
 - 설치 완료가 잘 되었는지 확인
 > ipython
 In [1] import torch // 설치 확인 
-
+> ipython
 In [2] torch.__version__ // 버전 확인
 
 - - - 
