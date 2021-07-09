@@ -21,11 +21,9 @@
 
 - 'pytorch.org' 사이트 : 컴퓨터 운영체제 / 사양마다 설치할 수 있는 명령어가 있음
 - 'conda install pytorch torchvision torchaudio -c pytorch'로 설치
-- 설치 완료가 잘 되었는지 확인
-> ipython
-In [1] import torch // 설치 확인 
-> ipython
-In [2] torch.__version__ // 버전 확인
+- 설치 완료가 잘 되었는지 확인 (ipython)
+- In [1] import torch // 설치 확인 
+- In [2] torch.__version__ // 버전 확인
 
 - - - 
 
