@@ -1,4 +1,4 @@
-# 파이토치(Pytorch) -  Tutorials
+# 💻 파이토치(Pytorch) -  Tutorials
 
 - - - 
 
@@ -31,7 +31,7 @@
 #### 3. 데이터셋이란?
 
 (1) In order to do this
-- 가상의 함수(ground-truth)를 통해서 데이터 쌍($$ x,y $$)를 입력한다.
+- 가상의 함수(ground-truth)를 통해서 데이터 쌍\[x,y\]을 입력한다.
 
 (2)
 
