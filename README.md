@@ -31,9 +31,19 @@
 #### 3. 데이터셋이란?
 
 (1) In order to do this
-- 가상의 함수(ground-truth)를 통해서 데이터 쌍\[x,y\]을 입력한다.
 
-(2)
+- 가상의 함수(ground-truth)를 통해서 데이터 쌍\[x,y\]을 입력한다.
+- 데이터 쌍은 벡터로 표현이 가능할 것이다.
+
+<img width="620" alt="스크린샷 2021-07-09 오전 2 20 37" src="https://user-images.githubusercontent.com/36816671/125114855-5c6cfb00-e09f-11eb-8d20-ed6a8c567fb5.png">
+
+
+
+(2) example : Tabular Dataset
+
+- 여러 column 으로 이루어진 테이블로 구성된 데이터셋 (e.g. 엑셀 파일)
+- 한 row가 한 sampled을 의미함
+- 한 column 개수가 벡터의 차원을 의미함
 
 
 
