@@ -1,6 +1,6 @@
 # 파이토치(Pytorch) -  Tutorials
 
-ㅡ ㅡ ㅡ
+- - - 
 
 #### 1. why pytorch?
 
@@ -15,7 +15,7 @@
 - TensorFlow에 비해서 낮은 상용화 지원
 - TensorFlow는 구글에서 pytorch는 페이스북에서 만듬 (단점은 아니고 특징)
 
-ㅡ ㅡ ㅡ 
+- - -
 
 #### 2. pytorch install
 
@@ -24,12 +24,13 @@
 - 설치 완료가 잘 되었는지 확인
 > ipython
 In [1] import torch // 설치 확인 
+
 In [2] torch.__version__ // 버전 확인
 
-ㅡ ㅡ ㅡ 
+- - - 
 
 #### 3. 데이터셋이란?
 
-ㅡ ㅡ ㅡ
+- - -
 
 #### 4. 텐서란?
