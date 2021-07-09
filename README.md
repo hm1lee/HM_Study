@@ -5,6 +5,7 @@
 #### 1. why pytorch?
 
 (1) 파이토치 장단점
+
  장점 
  - numpy와 매우 비슷한 문법
  - 동적으로 back-propagation 경로 생성 가능
@@ -28,6 +29,13 @@
 - - - 
 
 #### 3. 데이터셋이란?
+
+(1) In order to do this
+- 가상의 함수(ground-truth)를 통해서 데이터 쌍($$x,y)를 입력한다.
+
+(2)
+
+
 
 - - -
 
