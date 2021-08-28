@@ -18,6 +18,21 @@
 
 
 
-### Introduction
+### 1. Introduction
 
+### 2. Related Work
+
+### 3. Feature Selection
+
+### 4. Proposed Research Method
+
+![image](https://user-images.githubusercontent.com/36816671/131205832-9a745b6b-12ad-44b4-85b5-8f8c52c55746.png)
+
+![image](https://user-images.githubusercontent.com/36816671/131205843-4026ee15-048c-49d1-b971-41864f179325.png)
+
+![image](https://user-images.githubusercontent.com/36816671/131205870-4a86659f-1704-4327-b0a3-9fbb3bab873b.png)
+
+![image](https://user-images.githubusercontent.com/36816671/131205885-71dce077-ed0b-4b7c-ba60-0607c7474186.png)
+
+![image](https://user-images.githubusercontent.com/36816671/131205891-33b8c2f8-d059-4590-92ea-fae6eb7177d1.png)
 
