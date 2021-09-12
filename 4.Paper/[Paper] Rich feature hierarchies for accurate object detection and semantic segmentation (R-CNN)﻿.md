@@ -170,12 +170,13 @@ feature vector를 추출한다.
 - CNN을 통해 나온 feature map은 SVM을 통해 classification 및 bounding regreesion이 진행되게 되는데, 여기서 SVM 학습을 위해 NMS(non-maximum suppresion)과 IoU(inter-section-over-union)이라는 개념이 활용된다.
 
 
-\NMS(Non-maximum suppresion)
+```javascript
+NMS(Non-maximum suppresion)
 \1. 예측한 bounding box들의 예측 점수를 내림차순으로 정렬
 \2. 높은 점수의 박스부터 시작하여 나머지 박스들 간의 IoU를 계산
 \3. IoU값이 지정한 threhold보다 높은 박스를 제거
 \4. 최적의 박스만 남을 떄까지 위 과정을 반복
-
+```
 
 
 - - -
