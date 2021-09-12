@@ -44,6 +44,7 @@ Convolutional Neural Network(CNN)를 적용
 보조작업(auxiliary task)으로 supervised pre-training 적용
 ```
 
+- - -
 
 
 ### 2. Introduction
@@ -69,7 +70,7 @@ Convolutional Neural Network(CNN)를 적용
 4. 각 region 마다 category-specific linear SVM을 적용하여 label을 classification(분류)한다. 
 ```
 
-
+- - -
 
 ### 3. Object detection with R-CNN 
 
@@ -81,7 +82,7 @@ R-CNN은 위의 프로세스를 수행하기 위해서 3가지 모듈로 나뉜�
 3. Linear SVM : classification 진행
 ```
 
-1. Region Proposals
+**1. Region Proposals**
 
 
 
@@ -107,7 +108,7 @@ R-CNN은 위의 프로세스를 수행하기 위해서 3가지 모듈로 나뉜�
 3. 결합되어 커진 region을 최종 region proposal로 제안하기.
 ```
 
-2. CNN - Feature Extraction
+**2. CNN - Feature Extraction**
 
 ![img](https://blogfiles.pstatic.net/MjAyMTA5MTJfMTEy/MDAxNjMxNDQ2NjE1MDU0._MSWygDFmHwLGfYQWGKOEmPj_tOHfxUMyuUs6dknXJQg.P3-wokEnjHidbxemIjIC-nglNi4-P4L2EjrMSrpPFqkg.PNG.nm1lee/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-09-12_%EC%98%A4%ED%9B%84_8.36.49.png?type=w1)
 
@@ -121,7 +122,7 @@ feature vector를 추출한다.
 이때 CNN의 입력으로 사용되기 위해 각 region은 227x227 RGB의 고정된 사이즈로 변환되게 된다.
 ```
 
-3. Linear SVM
+**3. Linear SVM**
 
 
 
@@ -131,7 +132,7 @@ feature vector를 추출한다.
 
 - 2000장의 region proposals에서 fine-tuning때와는 다르게 ground truth box만을 positive sample, IoU 값이 0.3보다 작은 것은 negative sample로 지정 
 
-\- 이때, IoU값이 0.3보다 큰 경우 무시한다. (0.3은 gird search를 통해 찾은 값)
+  \- 이때, IoU값이 0.3보다 큰 경우 무시한다. (0.3은 gird search를 통해 찾은 값)
 
 
 
@@ -141,17 +142,17 @@ feature vector를 추출한다.
 
 - 추출된 벡터를 이용해 linear SVMs를 학습한다. 
 
-\- SVM은 2진 분류를 수행하므로 분류하려는 객체의 종류만큼 SVM이 필요하다. 
+  \- SVM은 2진 분류를 수행하므로 분류하려는 객체의 종류만큼 SVM이 필요하다. 
 
-\- 학습이 한 차례 끝난 후, ***hard negative mining*** 기법을 적용하여 재학습을 수행한다.
+  \- 학습이 한 차례 끝난 후, ***hard negative mining*** 기법을 적용하여 재학습을 수행한다.
 
 
 
 - R-CNN에서는 단순히 N-way softmax layer를 통해 분류를 진행하지 않고, SVMs통해서 하게 된다.
 
-\- SVM을 사용했을 때 성능이 더 좋기 때문이다. 
+  \- SVM을 사용했을 때 성능이 더 좋기 때문이다. 
 
-\- 성능 차이의 이유는 SVM을 학습시킬 때 positive sample를 더 엄밀하게 정의하며, SVM이 hard negative를 이용해 학습하기 때문이다.
+  \- 성능 차이의 이유는 SVM을 학습시킬 때 positive sample를 더 엄밀하게 정의하며, SVM이 hard negative를 이용해 학습하기 때문이다.
 
 
 
@@ -159,7 +160,7 @@ feature vector를 추출한다.
 
 
 
-- - 
+- - -
 
 ### 4. Results on PASCAL VOC 2010-12
 
@@ -180,7 +181,7 @@ feature vector를 추출한다.
 
 
 
-
+- - -
 
 
 ### 5. Problems
@@ -209,7 +210,7 @@ R-CNN의 위와 같은 한계점들로 인해, 추후 프로세스 및 연산 �
 
 
 
-- - 
+- - -
 
 ### 6. References
 
