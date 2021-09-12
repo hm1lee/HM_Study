@@ -131,10 +131,7 @@ feature vector를 추출한다.
 
 
 
-- 2000장의 region proposals에서 fine-tuning때와는 다르게 ground truth box만을 positive sample, IoU 값이 0.3보다 작은 것은 negative sample로 지정 
-
-  \- 이때, IoU값이 0.3보다 큰 경우 무시한다. (0.3은 gird search를 통해 찾은 값)
-
+- SVM 학습을 위한 라벨로서 IoU를 활용하였고 IoU 가 0.5이상인 것들을 positive 객체로 보고 나머지는 negative로 분류하여 학습하게 된다. 각 SGD iteration마다 32개의 positive window와 96개의 backgroud window 총 128개의 배치로 학습이 진행된다.
 
 
 - 이후는 fine-tuning과 마찬가지로 positive sample 32개 + negative sample 96개 = 128개의 미니배치를 구성한 후 fine-tuning된 AlexNet에 입력하여 4096 dimensional feature vector를 추출한다. 
@@ -158,6 +155,26 @@ feature vector를 추출한다.
 
 
 - linear SVM에서는 output으로 class와 confidence score를 반환한다.
+
+
+
+
+
+
+**4. Traning**
+
+- 학습에 사용되는 CNN 모델의 경우 ILSVRC 2012 데이터 셋으로 미리 학습된 pre-trained CNN(AlexNet) 모델을 사용한다.
+
+- Classification에 최적화된 CNN 모델을 VOC 데이터셋에 적용하기 위해, VOC의 region proposals을 통해서 SGD방식으로 CNN 파라미터를 업데이트 한다.
+
+- CNN을 통해 나온 feature map은 SVM을 통해 classification 및 bounding regreesion이 진행되게 되는데, 여기서 SVM 학습을 위해 NMS(non-maximum suppresion)과 IoU(inter-section-over-union)이라는 개념이 활용된다.
+
+
+\NMS(Non-maximum suppresion)
+\1. 예측한 bounding box들의 예측 점수를 내림차순으로 정렬
+\2. 높은 점수의 박스부터 시작하여 나머지 박스들 간의 IoU를 계산
+\3. IoU값이 지정한 threhold보다 높은 박스를 제거
+\4. 최적의 박스만 남을 떄까지 위 과정을 반복
 
 
 
